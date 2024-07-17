@@ -12,9 +12,9 @@ function displayPosts() {
 
   if (currentUser && currentUser.posts) {
     currentUser.posts.forEach((post, index) => {
-      const postElement = document.createElement("div");
-      postElement.classList.add("post");
-      postElement.innerHTML = `
+    const postElement = document.createElement("div");
+    postElement.classList.add("post");
+    postElement.innerHTML = `
                 <p class="author">Posted by: ${post.author}</p>
                 <p class="content">${post.content}</p>
                 <p class="timestamp">Posted at: ${post.createdAt}</p>

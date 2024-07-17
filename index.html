@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
-  </head>
-
-  <body>
-    <div id="signupPage">
-      <h1>Signup</h1>
-      <form id="signupForm">
-        <input type="text" id="username" placeholder="Username" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <input
-          type="password"
-          id="confirmPassword"
-          placeholder="Confirm Password"
-          required
-        />
-        <button type="submit">Signup</button>
-      </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    <div id="signup_container">
+        <h1>Sign Up</h1>
+        <form id="signup_form">
+            <div>
+                Username
+                <input type="text" id="user_name" placeholder="username" required>
+            </div>
+            <div>
+                Password
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div>
+                Confirm password
+                <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            </div>
+            <button id="submit">Signup</button>
+        </form>
     </div>
 
-    <script src="signup_app.js"></script>
-  </body>
+    <script src="signup.js"></script>
+</body>
 </html>
-
