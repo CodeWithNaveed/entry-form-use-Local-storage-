@@ -11,6 +11,6 @@ login.addEventListener("click", () => {
         alert("Invalid email or password");
     } else {
         alert(`${getDetails.fullName} You are logged in successfully.`);
-        window.location.href = "home.html";
+        window.location.href = "./home/home.html";
     }
 })

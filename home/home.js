@@ -19,7 +19,7 @@ logout.addEventListener("click", () => {
     window.location.reload()
     // event.preventDefault();
     // localStorage.removeItem("details");
-    window.location.href = "login.html";
+    window.location.href = "../index.html";
 })
 
 postBtn.addEventListener("click", () => {

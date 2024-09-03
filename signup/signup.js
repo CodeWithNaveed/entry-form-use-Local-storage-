@@ -25,6 +25,6 @@ signup.addEventListener("click", () => {
         alert("Passwords do not match");
     } else {
         alert(`${fullName} You are signed up successfully.`);
-        window.location.href = "login.html";
+        window.location.href = "../index.html";
     }
 })
