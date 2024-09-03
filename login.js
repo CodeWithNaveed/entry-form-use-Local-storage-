@@ -1,18 +1,16 @@
-let submit = document.getElementById("submit")
+const login = document.getElementById("login");
 
-submit?.addEventListener("click",function(event){
+login.addEventListener("click", () => {
     event.preventDefault();
-
-    const user_name = document.getElementById("user_name").value.trim()
-    const password = document.getElementById("password").value
-
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-
-    if (storedUser && storedUser.user_name === user_name && storedUser.password === password) {
-        localStorage.setItem("currentUser", JSON.stringify(storedUser));
-        alert("Login successful!");
-        window.location.href = "home.html";
+    const getDetails = JSON.parse(localStorage.getItem("details"));
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    if (!email || !password) {
+        alert("Please fill all the fields");
+    } else if (email !== getDetails.email || password !== getDetails.password) {
+        alert("Invalid email or password");
     } else {
-        alert("Invalid username or password.");
+        alert(`${getDetails.fullName} You are logged in successfully.`);
+        window.location.href = "home.html";
     }
 })

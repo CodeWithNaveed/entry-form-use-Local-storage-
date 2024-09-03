@@ -1,42 +1,30 @@
-let submit = document.getElementById("submit")
+const signup = document.getElementById("signup");
 
-submit?.addEventListener("click",function(event){
+signup.addEventListener("click", () => {
     event.preventDefault();
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
-    const user_name = document.getElementById("user_name").value.trim()
-    const password = document.getElementById("password").value
-    const confirm_password = document.getElementById("confirm_password").value
 
-    if (!user_name || !password || !confirm_password) {
-        alert("Please fill in all fields.");
-        return;
-    }
-  
-    if (password.length < 8) {
-        alert("Password must be at least 8 characters long.");
-        return;
-    }
-  
-    if (password.value !== confirm_password.value) {
-        alert("Passwords do not match.");
-        return;
+    const details = {
+        fullName,
+        email,
+        phoneNumber,
+        password,
+        confirmPassword
     }
 
-    const user = { user_name, password, posts: [] };
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("details", JSON.stringify(details));
 
-    alert("Account created successfully!");
-    window.location.href = "login.html";
+    if (!fullName || !email  || !phoneNumber || !password || !confirmPassword) {
+        alert("Please fill all the fields");
+    } else if (password !== confirmPassword) {
+        alert("Passwords do not match");
+    } else {
+        alert(`${fullName} You are signed up successfully.`);
+        window.location.href = "login.html";
+    }
 })
-
-
-
-
-
-
-
-
-
-
-
-
